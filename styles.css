@@ -103,6 +103,11 @@ a{ color: inherit; }
 }
 .nav-links a:hover{ color: var(--text); }
 
+.nav-icon{
+  color: var(--kw-red) !important;
+  font-weight: 950 !important;
+}
+
 /* Buttons */
 .btn{
   display:inline-flex;
@@ -182,6 +187,25 @@ a{ color: inherit; }
   color: var(--muted);
   font-weight: 700;
   font-size: 13px;
+}
+
+.social-row{
+  display:flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.social{
+  display:inline-flex;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(181,18,43,.22);
+  color: var(--kw-red);
+  font-weight: 950;
+  text-decoration:none;
+  background: rgba(181,18,43,.04);
+}
+.social:hover{
+  background: rgba(181,18,43,.08);
 }
 
 h1{
@@ -411,6 +435,24 @@ input:focus, select:focus, textarea:focus{
   border: 1px solid var(--border);
 }
 
+/* Recent Closings gallery */
+.gallery{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.gallery-img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display:block;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
 /* Footer */
 .footer{
   border-top: 1px solid var(--border);
@@ -440,4 +482,6 @@ input:focus, select:focus, textarea:focus{
   .contact-card{ flex-direction: column; align-items:flex-start; }
   .brand-sub{ max-width: 260px; }
   .listing-top{ flex-direction: column; align-items:flex-start; }
+  .gallery{ grid-template-columns: 1fr; }
+  .gallery-img{ height: auto; }
 }
