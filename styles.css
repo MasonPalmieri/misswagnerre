@@ -1,12 +1,15 @@
 :root{
   --kw-red:#b5122b;
   --kw-red-dark:#8f0f22;
+
   --bg:#ffffff;
   --text:#111827;
   --muted:#4b5563;
   --border:#e5e7eb;
+
   --panel:#ffffff;
   --panel-alt:#fafafa;
+
   --shadow: 0 12px 30px rgba(17,24,39,.08);
   --radius: 18px;
   --radius2: 22px;
@@ -18,7 +21,7 @@ html,body{
   margin:0;
   padding:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: var(--bg);
+  background: var(--bg) !important;
   color: var(--text);
 }
 
@@ -28,6 +31,7 @@ html,body{
   padding: 0 18px;
 }
 
+/* Links */
 a{ color: inherit; }
 .link{
   color: var(--kw-red);
@@ -39,14 +43,14 @@ a{ color: inherit; }
   text-underline-offset: 4px;
 }
 
-.sep{ color: #9ca3af; padding: 0 6px; }
+.sep{ color:#9ca3af; padding:0 6px; }
 
 /* Top bar */
 .topbar{
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -63,7 +67,7 @@ a{ color: inherit; }
   display:flex;
   align-items:center;
   gap: 14px;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .logo{
@@ -126,10 +130,7 @@ a{ color: inherit; }
 /* Hero */
 .hero{
   padding: 26px 0 10px;
-  background:
-    radial-gradient(900px 420px at 15% 0%, rgba(181,18,43,.09), transparent 60%),
-    radial-gradient(900px 420px at 90% 10%, rgba(17,24,39,.04), transparent 55%),
-    #fff;
+  background: #fff !important;
 }
 
 .hero-grid{
@@ -174,7 +175,7 @@ a{ color: inherit; }
 }
 .profile-links a{
   color: var(--kw-red);
-  text-decoration: none;
+  text-decoration:none;
   font-weight: 900;
 }
 .profile-links a:hover{ text-decoration: underline; text-underline-offset:4px; }
@@ -267,7 +268,7 @@ input:focus, select:focus, textarea:focus{
 .muted{ color: var(--muted); }
 
 /* Sections */
-.section{ padding: 26px 0; }
+.section{ padding: 26px 0; background:#fff; }
 .section-alt{ background: #fbfbfb; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .section-head h2{
