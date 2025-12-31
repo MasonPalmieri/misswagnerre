@@ -1,20 +1,19 @@
-// Set year in footer
+// Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Simple "mailto" handler so the form works without a backend
+// Mailto form (no backend needed)
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
   const data = new FormData(e.target);
-  const name = data.get("name");
-  const email = data.get("email");
-  const topic = data.get("topic");
-  const message = data.get("message");
+  const name = (data.get("name") || "").toString().trim();
+  const email = (data.get("email") || "").toString().trim();
+  const topic = (data.get("topic") || "").toString().trim();
+  const message = (data.get("message") || "").toString().trim();
 
-  // Replace this with Missy's business email when you have it:
-  const toEmail = "example@email.com";
+  const toEmail = "missywagner@kw.com";
 
-  const subject = encodeURIComponent(`Website inquiry: ${topic}`);
+  const subject = encodeURIComponent(`Website inquiry: ${topic || "General"}`);
   const body = encodeURIComponent(
     `Name: ${name}\nEmail: ${email}\n\nTopic: ${topic}\n\nMessage:\n${message}\n`
   );
