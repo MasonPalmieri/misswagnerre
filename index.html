@@ -9,91 +9,88 @@
 </head>
 
 <body>
-  <header class="site-header" id="top">
-    <nav class="nav">
+  <header class="topbar" id="top">
+    <div class="container nav">
       <a class="brand" href="#top" aria-label="Home">
-        <!-- KW logo (upload to assets/kw-logo.png) -->
-        <img class="kw-logo" src="assets/kw-logo.png" alt="Keller Williams Realty" />
-        <span class="brand-text">Missy Wagner Real Estate</span>
+        <img class="logo" src="assets/kw-logo.png" alt="Keller Williams Realty" />
+        <div class="brand-text">
+          <div class="brand-name">Missy Wagner Real Estate</div>
+          <div class="brand-sub">Plainville, MA • Wrentham, MA • Surrounding Towns</div>
+        </div>
       </a>
 
-      <div class="nav-links">
+      <nav class="nav-links" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#areas">Areas</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-small" href="tel:+15089543851">Call</a>
-      </div>
-    </nav>
+        <a class="btn btn-solid" href="tel:+15089543851">Call</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-left">
-        <div class="profile">
-          <!-- Headshot must be located at assets/HeadShot.jpg -->
-          <img
-            class="profile-img"
-            src="assets/HeadShot.jpg"
-            alt="Missy Wagner"
-            loading="eager"
-          />
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="profile">
+            <img class="avatar" src="assets/HeadShot.jpg" alt="Missy Wagner" />
+            <div class="profile-meta">
+              <div class="profile-name">Missy Wagner</div>
+              <div class="profile-title">Real Estate Agent</div>
+              <div class="profile-links">
+                <a href="tel:+15089543851">(508) 954-3851</a>
+                <span class="sep">•</span>
+                <a href="mailto:missywagner@kw.com">missywagner@kw.com</a>
+                <span class="sep">•</span>
+                <a href="https://missywagner.com" target="_blank" rel="noreferrer">MissyWagner.com</a>
+              </div>
+            </div>
+          </div>
 
-          <div class="profile-meta">
-            <p class="profile-name">Missy Wagner</p>
-            <p class="profile-title">Real Estate Agent</p>
+          <h1>Real estate services with clear communication and strong local expertise.</h1>
+          <p class="lead">Your number one source for Plainville, MA Real Estate and Wrentham, MA Real Estate.</p>
 
-            <div class="profile-links">
-              <a href="tel:+15089543851">(508) 954-3851</a>
-              <span class="dot">•</span>
-              <a href="mailto:missywagner@kw.com">missywagner@kw.com</a>
-              <span class="dot">•</span>
-              <a href="https://missywagner.com" target="_blank" rel="noreferrer">MissyWagner.com</a>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="tel:+15089543851">Call (508) 954-3851</a>
+            <a class="btn btn-outline" href="sms:+15089543851">Text</a>
+            <a class="btn btn-outline" href="mailto:missywagner@kw.com">Email</a>
+          </div>
+
+          <div class="info-grid">
+            <div class="info">
+              <div class="info-label">Address</div>
+              <div class="info-value">25 Messenger Street, Plainville, MA</div>
+            </div>
+            <div class="info">
+              <div class="info-label">Hours</div>
+              <div class="info-value"><span class="pill">Always open</span></div>
+            </div>
+            <div class="info">
+              <div class="info-label">Website</div>
+              <div class="info-value">
+                <a class="link" href="https://missywagner.com" target="_blank" rel="noreferrer">missywagner.com</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <h1>Real estate services with clear communication and strong local expertise.</h1>
-        <p class="lead">
-          Your number one source for Plainville, MA Real Estate and Wrentham, MA Real Estate.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn" href="tel:+15089543851">Call (508) 954-3851</a>
-          <a class="btn btn-outline" href="sms:+15089543851">Text</a>
-          <a class="btn btn-outline" href="mailto:missywagner@kw.com">Email</a>
-        </div>
-
-        <div class="mini-info">
-          <div class="mini">
-            <span class="mini-label">Address</span>
-            <span class="mini-value">25 Messenger Street, Plainville, MA</span>
-          </div>
-          <div class="mini">
-            <span class="mini-label">Hours</span>
-            <span class="mini-value"><span class="status-pill">Always open</span></span>
-          </div>
-          <div class="mini">
-            <span class="mini-label">Website</span>
-            <span class="mini-value">
-              <a class="link-strong" href="https://missywagner.com" target="_blank" rel="noreferrer">missywagner.com</a>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="card">
+        <div class="form-card">
           <h2>Quick Contact</h2>
           <p class="muted">Send a message and I’ll get back to you.</p>
 
           <form id="contactForm" class="form">
-            <label>
-              Name
-              <input name="name" type="text" autocomplete="name" required />
-            </label>
+            <div class="row">
+              <label>
+                Name
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
 
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+            </div>
 
             <label>
               What can I help with?
@@ -109,95 +106,100 @@
 
             <label>
               Message
-              <textarea name="message" rows="4" placeholder="Tell me your timeline and preferred area…" required></textarea>
+              <textarea name="message" rows="5" placeholder="Tell me your timeline and preferred area…" required></textarea>
             </label>
 
-            <button class="btn" type="submit">Send message</button>
+            <button class="btn btn-solid btn-full" type="submit">Send message</button>
 
-            <p class="muted small">
-              This form opens your email app (no backend needed).
-            </p>
+            <p class="muted small">This form opens your email app (no backend needed).</p>
           </form>
         </div>
       </div>
     </section>
-  </header>
 
-  <main class="main">
+    <!-- SERVICES -->
     <section id="services" class="section">
-      <div class="section-head">
-        <h2>Services</h2>
-        <p class="muted">Support for buyers, sellers, and anyone planning the next move.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Home Buying</h3>
-          <p>Neighborhood guidance, offer strategy, inspections, and closing coordination.</p>
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p class="muted">Support for buyers, sellers, and anyone planning the next move.</p>
         </div>
-        <div class="card">
-          <h3>Home Selling</h3>
-          <p>Pricing strategy, professional marketing, and clear milestones from list-to-close.</p>
-        </div>
-        <div class="card">
-          <h3>Market Insights</h3>
-          <p>Comparative market analysis (CMA), prep recommendations, and timing guidance.</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="areas" class="section section-alt">
-      <div class="section-head">
-        <h2>Areas</h2>
-        <p class="muted">Plainville, Wrentham, and surrounding towns.</p>
-      </div>
-
-      <div class="pill-row" aria-label="Service areas">
-        <span class="pill">Plainville</span>
-        <span class="pill">Wrentham</span>
-        <span class="pill">North Attleboro</span>
-        <span class="pill">Attleboro</span>
-        <span class="pill">Cumberland</span>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">Call, text, email, or visit the website anytime.</p>
-      </div>
-
-      <div class="contact-card card">
-        <div class="contact-left">
-          <img class="contact-photo" src="assets/HeadShot.jpg" alt="Missy Wagner" />
-          <div>
-            <h3>Missy Wagner Real Estate</h3>
-            <p class="muted contact-line">25 Messenger Street, Plainville, MA</p>
-            <p class="muted contact-line">
-              <a class="link-strong" href="tel:+15089543851">(508) 954-3851</a>
-              <span class="dot">•</span>
-              <a class="link-strong" href="mailto:missywagner@kw.com">missywagner@kw.com</a>
-            </p>
-            <p class="muted contact-line">
-              <a class="link-strong" href="https://missywagner.com" target="_blank" rel="noreferrer">MissyWagner.com</a>
-            </p>
-            <p class="status-pill">Always open</p>
+        <div class="cards-3">
+          <div class="card">
+            <h3>Home Buying</h3>
+            <p>Neighborhood guidance, offer strategy, inspections, and closing coordination.</p>
+          </div>
+          <div class="card">
+            <h3>Home Selling</h3>
+            <p>Pricing strategy, professional marketing, and clear milestones from list-to-close.</p>
+          </div>
+          <div class="card">
+            <h3>Market Insights</h3>
+            <p>Comparative market analysis (CMA), prep recommendations, and timing guidance.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="contact-actions">
-          <a class="btn" href="tel:+15089543851">Call</a>
-          <a class="btn btn-outline" href="sms:+15089543851">Text</a>
-          <a class="btn btn-outline" href="mailto:missywagner@kw.com">Email</a>
+    <!-- AREAS -->
+    <section id="areas" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Areas</h2>
+          <p class="muted">Plainville, Wrentham, and surrounding towns.</p>
+        </div>
+
+        <div class="pills">
+          <span class="pill-outline">Plainville</span>
+          <span class="pill-outline">Wrentham</span>
+          <span class="pill-outline">North Attleboro</span>
+          <span class="pill-outline">Attleboro</span>
+          <span class="pill-outline">Cumberland</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Call, text, email, or visit the website anytime.</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-left">
+            <img class="avatar-lg" src="assets/HeadShot.jpg" alt="Missy Wagner" />
+            <div>
+              <div class="contact-title">Missy Wagner Real Estate</div>
+              <div class="contact-line">25 Messenger Street, Plainville, MA</div>
+              <div class="contact-line">
+                <a class="link" href="tel:+15089543851">(508) 954-3851</a>
+                <span class="sep">•</span>
+                <a class="link" href="mailto:missywagner@kw.com">missywagner@kw.com</a>
+              </div>
+              <div class="contact-line">
+                <a class="link" href="https://missywagner.com" target="_blank" rel="noreferrer">MissyWagner.com</a>
+              </div>
+              <div class="contact-line"><span class="pill">Always open</span></div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-solid" href="tel:+15089543851">Call</a>
+            <a class="btn btn-outline" href="sms:+15089543851">Text</a>
+            <a class="btn btn-outline" href="mailto:missywagner@kw.com">Email</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <img class="kw-logo footer-logo" src="assets/kw-logo.png" alt="Keller Williams Realty" />
-      <p class="muted small">© <span id="year"></span> Missy Wagner Real Estate. All rights reserved.</p>
+    <div class="container footer-inner">
+      <img class="logo small-logo" src="assets/kw-logo.png" alt="Keller Williams Realty" />
+      <div class="muted small">© <span id="year"></span> Missy Wagner Real Estate. All rights reserved.</div>
     </div>
   </footer>
 
