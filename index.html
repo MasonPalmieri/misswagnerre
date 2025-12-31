@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Missy Wagner Real Estate</title>
+  <meta name="description" content="Missy Wagner Real Estate — local expertise, responsive service, and professional results." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Missy Wagner Real Estate Home">
+        <span class="brand-mark" aria-hidden="true">MW</span>
+        <span class="brand-text">Missy Wagner Real Estate</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#testimonials">Testimonials</a>
+        <a class="btn btn-small" href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="top" class="hero">
+      <div class="hero-content">
+        <h1>Buy. Sell. Move with confidence.</h1>
+        <p class="lead">
+          Real estate guidance with a focus on clear communication, strong marketing, and smooth transactions.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="tel:+15089543851">Call 508-954-3851</a>
+          <a class="btn btn-ghost" href="https://www.facebook.com/MissyWagnerRE/" target="_blank" rel="noreferrer">
+            Visit Facebook
+          </a>
+        </div>
+
+        <p class="fineprint">
+          Call or text: <strong>508-954-3851</strong>
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <h2>Quick Contact</h2>
+          <p class="muted">Send a message and I’ll get back to you.</p>
+
+          <form id="contactForm" class="form">
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+
+            <label>
+              What are you looking to do?
+              <select name="topic" required>
+                <option value="" disabled selected>Select one…</option>
+                <option>Buy a home</option>
+                <option>Sell a home</option>
+                <option>Both buy & sell</option>
+                <option>Market analysis / pricing</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell me a little about your timeline and location…" required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send message</button>
+
+            <p class="muted small">
+              This demo form opens your email app (no backend). You can upgrade it later to a real form handler.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="main">
+    <section id="services" class="section">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p class="muted">Support for buyers, sellers, and anyone planning the next move.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Home Buying</h3>
+          <p>Neighborhood guidance, offer strategy, inspections, and closing coordination.</p>
+        </div>
+        <div class="card">
+          <h3>Home Selling</h3>
+          <p>Pricing strategy, professional marketing, and clear milestones from list-to-close.</p>
+        </div>
+        <div class="card">
+          <h3>Market Insights</h3>
+          <p>Comparative market analysis (CMA), prep recommendations, and timing guidance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="section section-alt">
+      <div class="section-head">
+        <h2>Local Areas</h2>
+        <p class="muted">
+          Examples of towns frequently featured in listings and updates.
+        </p>
+      </div>
+
+      <div class="pill-row" aria-label="Service areas">
+        <span class="pill">North Attleboro</span>
+        <span class="pill">Attleboro</span>
+        <span class="pill">Plainville</span>
+        <span class="pill">Wrentham</span>
+        <span class="pill">Cumberland</span>
+      </div>
+
+      <p class="muted small">
+        (These locations are based on publicly visible post snippets.) :contentReference[oaicite:1]{index=1}
+      </p>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="section-head">
+        <h2>Testimonials</h2>
+        <p class="muted">Replace these with real client quotes (recommended).</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <p class="quote">“Missy was responsive, organized, and guided us through every step.”</p>
+          <p class="muted small">— Buyer</p>
+        </div>
+        <div class="card">
+          <p class="quote">“Great marketing and strong negotiation. Smooth process from start to finish.”</p>
+          <p class="muted small">— Seller</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Call or text anytime.</p>
+      </div>
+
+      <div class="contact-card card">
+        <div>
+          <h3>Missy Wagner Real Estate</h3>
+          <p class="muted">
+            Phone: <a href="tel:+15089543851">508-954-3851</a>
+          </p>
+          <p class="muted small">
+            “Call or text” is used in multiple public posts from the page. :contentReference[oaicite:2]{index=2}
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn" href="tel:+15089543851">Call now</a>
+          <a class="btn btn-ghost" href="sms:+15089543851">Text</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="muted small">
+      © <span id="year"></span> Missy Wagner Real Estate. All rights reserved.
+    </p>
+    <p class="muted small">
+      <a href="https://www.facebook.com/MissyWagnerRE/" target="_blank" rel="noreferrer">Facebook</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
