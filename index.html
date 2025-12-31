@@ -9,10 +9,11 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <header class="site-header" id="top">
     <nav class="nav">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">MW</span>
+        <!-- KW logo (upload to assets/kw-logo.png) -->
+        <img class="kw-logo" src="assets/kw-logo.png" alt="Keller Williams Realty" />
         <span class="brand-text">Missy Wagner Real Estate</span>
       </a>
 
@@ -24,18 +25,21 @@
       </div>
     </nav>
 
-    <section id="top" class="hero">
+    <section class="hero">
       <div class="hero-left">
         <div class="profile">
+          <!-- Headshot must be located at assets/HeadShot.jpg -->
           <img
             class="profile-img"
             src="assets/HeadShot.jpg"
             alt="Missy Wagner"
             loading="eager"
           />
+
           <div class="profile-meta">
             <p class="profile-name">Missy Wagner</p>
             <p class="profile-title">Real Estate Agent</p>
+
             <div class="profile-links">
               <a href="tel:+15089543851">(508) 954-3851</a>
               <span class="dot">•</span>
@@ -46,15 +50,15 @@
           </div>
         </div>
 
-        <h1>Real estate services with local focus and fast communication.</h1>
+        <h1>Real estate services with clear communication and strong local expertise.</h1>
         <p class="lead">
           Your number one source for Plainville, MA Real Estate and Wrentham, MA Real Estate.
         </p>
 
         <div class="cta-row">
           <a class="btn" href="tel:+15089543851">Call (508) 954-3851</a>
-          <a class="btn btn-ghost" href="sms:+15089543851">Text</a>
-          <a class="btn btn-ghost" href="mailto:missywagner@kw.com">Email</a>
+          <a class="btn btn-outline" href="sms:+15089543851">Text</a>
+          <a class="btn btn-outline" href="mailto:missywagner@kw.com">Email</a>
         </div>
 
         <div class="mini-info">
@@ -66,18 +70,19 @@
             <span class="mini-label">Hours</span>
             <span class="mini-value"><span class="status-pill">Always open</span></span>
           </div>
+          <div class="mini">
+            <span class="mini-label">Website</span>
+            <span class="mini-value">
+              <a class="link-strong" href="https://missywagner.com" target="_blank" rel="noreferrer">missywagner.com</a>
+            </span>
+          </div>
         </div>
       </div>
 
       <div class="hero-right">
         <div class="card">
-          <div class="card-head">
-            <img class="card-avatar" src="assets/HeadShot.jpg" alt="Missy Wagner" />
-            <div>
-              <h2>Quick Contact</h2>
-              <p class="muted">Send a message and I’ll get back to you.</p>
-            </div>
-          </div>
+          <h2>Quick Contact</h2>
+          <p class="muted">Send a message and I’ll get back to you.</p>
 
           <form id="contactForm" class="form">
             <label>
@@ -169,11 +174,12 @@
             <h3>Missy Wagner Real Estate</h3>
             <p class="muted contact-line">25 Messenger Street, Plainville, MA</p>
             <p class="muted contact-line">
-              <a href="tel:+15089543851">(508) 954-3851</a> ·
-              <a href="mailto:missywagner@kw.com">missywagner@kw.com</a>
+              <a class="link-strong" href="tel:+15089543851">(508) 954-3851</a>
+              <span class="dot">•</span>
+              <a class="link-strong" href="mailto:missywagner@kw.com">missywagner@kw.com</a>
             </p>
             <p class="muted contact-line">
-              <a href="https://missywagner.com" target="_blank" rel="noreferrer">MissyWagner.com</a>
+              <a class="link-strong" href="https://missywagner.com" target="_blank" rel="noreferrer">MissyWagner.com</a>
             </p>
             <p class="status-pill">Always open</p>
           </div>
@@ -181,15 +187,18 @@
 
         <div class="contact-actions">
           <a class="btn" href="tel:+15089543851">Call</a>
-          <a class="btn btn-ghost" href="sms:+15089543851">Text</a>
-          <a class="btn btn-ghost" href="mailto:missywagner@kw.com">Email</a>
+          <a class="btn btn-outline" href="sms:+15089543851">Text</a>
+          <a class="btn btn-outline" href="mailto:missywagner@kw.com">Email</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p class="muted small">© <span id="year"></span> Missy Wagner Real Estate. All rights reserved.</p>
+    <div class="footer-inner">
+      <img class="kw-logo footer-logo" src="assets/kw-logo.png" alt="Keller Williams Realty" />
+      <p class="muted small">© <span id="year"></span> Missy Wagner Real Estate. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
