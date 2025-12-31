@@ -1,7 +1,5 @@
-// Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Mailto form (no backend needed)
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
