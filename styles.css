@@ -529,11 +529,11 @@ input:focus, textarea:focus{
 
 .small-logo{ height: 24px; }
 
-/* ✅ PalmWeb credit strip (subtle) */
+/* ✅ PalmWeb credit strip (subtle + forced small logo) */
 .palmweb-strip{
   border-top: 1px solid var(--border);
   background: #fff;
-  padding: 14px 0;
+  padding: 10px 0;
 }
 
 .palmweb-inner{
@@ -543,15 +543,18 @@ input:focus, textarea:focus{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap:wrap;
   text-align:center;
 }
 
-.palmweb-logo{
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
+.palmweb-strip .palmweb-logo{
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  object-fit: contain !important;
+  display: inline-block !important;
   opacity: 0.9;
   border-radius: 8px;
 }
@@ -563,6 +566,7 @@ input:focus, textarea:focus{
   gap: 8px;
   flex-wrap:wrap;
   font-size: 12px;
+  line-height: 1.2;
   color: #6b7280; /* muted gray */
   font-weight: 700;
 }
@@ -593,24 +597,4 @@ input:focus, textarea:focus{
   .gallery-img{ height: auto; }
   .listing-top{ flex-direction: column; align-items:flex-start; }
   .nav-links{ display:none; }
-}
-/* --- PalmWeb credit strip - force logo small --- */
-.palmweb-strip img,
-.palmweb-logo{
-  width: 26px !important;
-  height: 26px !important;
-  max-width: 26px !important;
-  max-height: 26px !important;
-  object-fit: contain !important;
-  display: inline-block !important;
-}
-
-/* Keep the strip compact */
-.palmweb-strip{
-  padding: 10px 0 !important;
-}
-
-.palmweb-text{
-  font-size: 12px !important;
-  line-height: 1.2 !important;
 }
