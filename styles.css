@@ -594,3 +594,23 @@ input:focus, textarea:focus{
   .listing-top{ flex-direction: column; align-items:flex-start; }
   .nav-links{ display:none; }
 }
+/* --- PalmWeb credit strip - force logo small --- */
+.palmweb-strip img,
+.palmweb-logo{
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px !important;
+  max-height: 26px !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+}
+
+/* Keep the strip compact */
+.palmweb-strip{
+  padding: 10px 0 !important;
+}
+
+.palmweb-text{
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
