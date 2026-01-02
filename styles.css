@@ -634,3 +634,18 @@ input:focus, textarea:focus{
 .hero-form .muted{
   color: #374151;
 }
+
+/* =========================================
+   Fix header Call button sizing
+========================================= */
+
+.topbar .nav-links .btn-solid.btn-small{
+  min-width: 88px;          /* prevents squish */
+  padding: 10px 18px;       /* more horizontal breathing room */
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex: 0 0 auto;           /* don't shrink in flex row */
+  border-radius: 999px;
+  line-height: 1;
+}
