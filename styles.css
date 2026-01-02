@@ -598,3 +598,39 @@ input:focus, textarea:focus{
   .listing-top{ flex-direction: column; align-items:flex-start; }
   .nav-links{ display:none; }
 }
+
+/* =========================================
+   Contrast improvements for hero buttons
+   (better readability over photos)
+========================================= */
+
+/* Make the hero outline buttons readable over background */
+.hero-actions .btn-outline.hero-outline{
+  background: rgba(255,255,255,.92);
+  color: #111827;
+  border-color: rgba(255,255,255,.92);
+  box-shadow: 0 10px 22px rgba(0,0,0,.20);
+}
+
+.hero-actions .btn-outline.hero-outline:hover{
+  background: rgba(255,255,255,1);
+  border-color: rgba(255,255,255,1);
+}
+
+/* Make the social pills more readable */
+.hero-social{
+  background: rgba(255,255,255,.92);
+  color: #111827;
+  border-color: rgba(255,255,255,.92);
+  box-shadow: 0 10px 22px rgba(0,0,0,.20);
+}
+
+.hero-social:hover{
+  background: rgba(255,255,255,1);
+  border-color: rgba(255,255,255,1);
+}
+
+/* Optional: Make the small text under the form slightly darker */
+.hero-form .muted{
+  color: #374151;
+}
