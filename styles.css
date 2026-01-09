@@ -676,3 +676,15 @@ input:focus, textarea:focus{
 
   .nav-links{ display:none; }
 }
+/* =========================================
+   FIX: Header Call button text contrast
+========================================= */
+
+.topbar .nav-links .btn.btn-solid{
+  color: #ffffff !important;
+  font-weight: 950 !important;
+}
+
+.topbar .nav-links .btn.btn-solid:hover{
+  color: #ffffff !important;
+}
