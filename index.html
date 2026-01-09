@@ -181,60 +181,108 @@
       </div>
     </section>
 
-    <!-- CURRENT LISTINGS (matches Recent Closings layout) -->
-    <section id="listings" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Current Listings</h2>
-          <p class="muted">Click a listing below to view full details.</p>
-        </div>
+ /* ================================
+   LISTINGS — uniform shape
+================================ */
 
-        <!-- SAME LAYOUT AS .gallery but for listings -->
-        <div class="listing-gallery">
-          <!-- 1) Top Left: 29 Woodbine -->
-          <a
-            class="listing-tile"
-            href="https://www.zillow.com/homedetails/29-Woodbine-St-APT-6-Pawtucket-RI-02860/65921912_zpid/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img class="listing-tile-img" src="assets/29Woodbine6Pawtucket.jpg" alt="29 Woodbine St Pawtucket" loading="lazy" />
-            <div class="listing-tile-overlay">
-              <div class="listing-tile-title">29 Woodbine St Pawtucket</div>
-              <div class="listing-tile-badge">View on Zillow</div>
-            </div>
-          </a>
+.listing-gallery{
+  margin-top: 16px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  align-items: start;
+}
 
-          <!-- 2) Top Right: 88 Arnold -->
-          <a
-            class="listing-tile"
-            href="https://www.zillow.com/homedetails/88-Arnold-Rd-North-Attleboro-MA-02760/56852708_zpid/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img class="listing-tile-img" src="assets/88arnold1.jpg" alt="88 Arnold Rd North Attleboro" loading="lazy" />
-            <div class="listing-tile-overlay">
-              <div class="listing-tile-title">88 Arnold Rd North Attleboro</div>
-              <div class="listing-tile-badge">View on Zillow</div>
-            </div>
-          </a>
+.listing-tile{
+  position: relative;
+  display:block;
+  overflow:hidden;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-decoration:none;
+  background: #fff;
+  transition: transform .10s ease, box-shadow .15s ease;
+}
 
-          <!-- 3) Middle Center: 78 St Joe (odd item centered) -->
-          <a
-            class="listing-tile listing-tile-center"
-            href="https://www.zillow.com/homedetails/78-Saint-Joseph-St-APT-9-Woonsocket-RI-02895/65832683_zpid/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img class="listing-tile-img" src="assets/78stjoe9.jpg" alt="78 Saint Joseph St Apt 9 Woonsocket" loading="lazy" />
-            <div class="listing-tile-overlay">
-              <div class="listing-tile-title">78 Saint Joseph St APT 9 Woonsocket</div>
-              <div class="listing-tile-badge">View on Zillow</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+/* ✅ LOCK CARD HEIGHT so every tile matches */
+.listing-tile{
+  height: 360px; /* <- all listings will be the same height */
+}
+
+.listing-tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(17,24,39,.14);
+}
+
+/* ✅ force image to fill the card exactly */
+.listing-tile-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+
+/* Overlay always stays on bottom */
+.listing-tile-overlay{
+  position:absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(229,231,235,.8);
+  backdrop-filter: blur(8px);
+}
+
+.listing-tile-title{
+  font-weight: 950;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.listing-tile-badge{
+  display:inline-flex;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(181,18,43,.10);
+  border: 1px solid rgba(181,18,43,.18);
+  color: var(--kw-red);
+  font-weight: 950;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* ✅ center the 3rd item but KEEP SAME HEIGHT */
+.listing-tile-center{
+  grid-column: 1 / -1;
+  max-width: 520px;
+  justify-self: center;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 980px){
+  .listing-gallery{
+    grid-template-columns: 1fr;
+  }
+
+  .listing-tile-center{
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .listing-tile{
+    height: 320px; /* slightly shorter on mobile */
+  }
+}
+
 
     <!-- RECENT CLOSINGS -->
     <section id="closings" class="section section-alt">
