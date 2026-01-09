@@ -396,42 +396,72 @@ input:focus, textarea:focus{
   font-weight: 900;
 }
 
-/* Listings */
-.listing-card{
-  display:block;
-  margin-top: 14px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius2);
-  box-shadow: var(--shadow);
-  padding: 18px;
-  text-decoration: none;
-  transition: transform .08s ease, border-color .15s ease, box-shadow .15s ease;
-}
-.listing-card:hover{
-  transform: translateY(-2px);
-  border-color: rgba(181,18,43,.25);
-  box-shadow: 0 16px 40px rgba(17,24,39,.12);
+/* ================================
+   LISTINGS — EXACT SAME FEEL AS CLOSINGS
+================================ */
+
+/* 2-column grid like Recent Closings */
+.listing-gallery{
+  margin-top: 16px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-.listing-top{
+/* Each tile is clickable like a card */
+.listing-tile{
+  position: relative;
+  display:block;
+  overflow:hidden;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-decoration:none;
+  background: #fff;
+  transition: transform .10s ease, box-shadow .15s ease;
+}
+.listing-tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(17,24,39,.14);
+}
+
+/* Image itself */
+.listing-tile-img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display:block;
+}
+
+/* Overlay for title + badge */
+.listing-tile-overlay{
+  position:absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap: 12px;
-  margin-bottom: 12px;
-}
-.listing-top h3{
-  margin:0;
-  font-size: 18px;
-  font-weight: 950;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(229,231,235,.8);
+  backdrop-filter: blur(8px);
 }
 
-.listing-badge{
+.listing-tile-title{
+  font-weight: 950;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.listing-tile-badge{
   display:inline-flex;
-  padding: 7px 10px;
+  padding: 8px 10px;
   border-radius: 999px;
-  background: rgba(181,18,43,.08);
+  background: rgba(181,18,43,.10);
   border: 1px solid rgba(181,18,43,.18);
   color: var(--kw-red);
   font-weight: 950;
@@ -439,16 +469,14 @@ input:focus, textarea:focus{
   white-space: nowrap;
 }
 
-.listing-img{
-  width: 100%;
-  max-width: 950px;
-  height: auto;
-  display:block;
-  border-radius: 16px;
-  border: 1px solid var(--border);
+/* Center the 3rd item (odd item) like your screenshot request */
+.listing-tile-center{
+  grid-column: 1 / -1;
+  max-width: 760px;
+  justify-self: center;
 }
 
-/* Recent Closings gallery */
+/* Recent Closings gallery (unchanged) */
 .gallery{
   margin-top: 16px;
   display:grid;
@@ -567,7 +595,7 @@ input:focus, textarea:focus{
   flex-wrap:wrap;
   font-size: 12px;
   line-height: 1.2;
-  color: #6b7280; /* muted gray */
+  color: #6b7280;
   font-weight: 700;
 }
 
@@ -588,49 +616,29 @@ input:focus, textarea:focus{
   padding: 0 2px;
 }
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero-inner{ grid-template-columns: 1fr; }
-  .hero-copy h1{ font-size: 42px; }
-  .cards-3{ grid-template-columns: 1fr; }
-  .gallery{ grid-template-columns: 1fr; }
-  .gallery-img{ height: auto; }
-  .listing-top{ flex-direction: column; align-items:flex-start; }
-  .nav-links{ display:none; }
-}
-
 /* =========================================
    Contrast improvements for hero buttons
-   (better readability over photos)
 ========================================= */
-
-/* Make the hero outline buttons readable over background */
 .hero-actions .btn-outline.hero-outline{
   background: rgba(255,255,255,.92);
   color: #111827;
   border-color: rgba(255,255,255,.92);
   box-shadow: 0 10px 22px rgba(0,0,0,.20);
 }
-
 .hero-actions .btn-outline.hero-outline:hover{
   background: rgba(255,255,255,1);
   border-color: rgba(255,255,255,1);
 }
-
-/* Make the social pills more readable */
 .hero-social{
   background: rgba(255,255,255,.92);
   color: #111827;
   border-color: rgba(255,255,255,.92);
   box-shadow: 0 10px 22px rgba(0,0,0,.20);
 }
-
 .hero-social:hover{
   background: rgba(255,255,255,1);
   border-color: rgba(255,255,255,1);
 }
-
-/* Optional: Make the small text under the form slightly darker */
 .hero-form .muted{
   color: #374151;
 }
@@ -638,113 +646,33 @@ input:focus, textarea:focus{
 /* =========================================
    Fix header Call button sizing
 ========================================= */
-
 .topbar .nav-links .btn-solid.btn-small{
-  min-width: 88px;          /* prevents squish */
-  padding: 10px 18px;       /* more horizontal breathing room */
+  min-width: 88px;
+  padding: 10px 18px;
   text-align: center;
   justify-content: center;
   white-space: nowrap;
-  flex: 0 0 auto;           /* don't shrink in flex row */
+  flex: 0 0 auto;
   border-radius: 999px;
   line-height: 1;
 }
-/* =========================================
-   Listings: 2-column grid + centered last card
-========================================= */
 
-.listings-grid{
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  align-items: start;
-}
+/* Responsive */
+@media (max-width: 980px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .hero-copy h1{ font-size: 42px; }
+  .cards-3{ grid-template-columns: 1fr; }
+  .gallery{ grid-template-columns: 1fr; }
+  .gallery-img{ height: auto; }
 
-/* If there's an odd number of listings, center the last one */
-.listings-grid > .listing-card:last-child:nth-child(odd){
-  grid-column: 1 / -1;
-  max-width: 560px;
-  justify-self: center;
-}
-
-/* Make listing images consistent in grid */
-.listing-img{
-  width: 100%;
-  height: 320px;          /* keeps the grid clean */
-  object-fit: cover;      /* crops nicely */
-  display: block;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-}
-
-/* Responsive: stack on mobile */
-@media (max-width: 900px){
-  .listings-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .listings-grid > .listing-card:last-child:nth-child(odd){
+  /* listings stack on mobile */
+  .listing-gallery{ grid-template-columns: 1fr; }
+  .listing-tile-center{
     grid-column: auto;
     max-width: none;
     justify-self: stretch;
   }
+  .listing-tile-img{ height: auto; }
 
-  .listing-img{
-    height: auto; /* let the image be natural on small screens */
-  }
+  .nav-links{ display:none; }
 }
-
-/* =========================================
-   FORCE Current Listings Grid (2 columns)
-========================================= */
-
-.listings-grid{
-  margin-top: 16px;
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  align-items: start;
-}
-
-/* Make sure each listing card behaves like a grid card */
-.listings-grid .listing-card{
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  display: block;
-}
-
-/* If odd number of listings, center the last one */
-.listings-grid .listing-card:last-child:nth-child(odd){
-  grid-column: 1 / -1;
-  max-width: 620px !important;
-  justify-self: center;
-}
-
-/* Make listing images uniform so the grid looks correct */
-.listings-grid .listing-img{
-  width: 100%;
-  height: 280px;       /* ✅ key: keeps grid clean */
-  object-fit: cover;
-  display:block;
-  border-radius: 16px;
-}
-
-/* Responsive: stack on mobile */
-@media (max-width: 900px){
-  .listings-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .listings-grid .listing-card:last-child:nth-child(odd){
-    grid-column: auto;
-    max-width: none !important;
-    justify-self: stretch;
-  }
-
-  .listings-grid .listing-img{
-    height: auto;
-  }
-}
-
