@@ -7,7 +7,7 @@
   <meta name="description" content="Missy Wagner Real Estate — Plainville, MA & surrounding areas. Call or text (508) 954-3851." />
 
   <!-- CSS cache-bust for GitHub Pages -->
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 </head>
 
 <body>
@@ -181,79 +181,60 @@
       </div>
     </section>
 
-<!-- CURRENT LISTINGS -->
-<section id="listings" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Current Listings</h2>
-      <p class="muted">Click a listing below to view full details.</p>
-    </div>
-
-    <div class="listings-grid">
-      <!-- Listing #1 -->
-      <a
-        class="listing-card"
-        href="https://www.zillow.com/homedetails/29-Woodbine-St-APT-6-Pawtucket-RI-02860/65921912_zpid/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="listing-top">
-          <h3>29 Woodbine St Pawtucket</h3>
-          <span class="listing-badge">View on Zillow</span>
+    <!-- CURRENT LISTINGS (matches Recent Closings layout) -->
+    <section id="listings" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Current Listings</h2>
+          <p class="muted">Click a listing below to view full details.</p>
         </div>
 
-        <img
-          class="listing-img"
-          src="assets/29Woodbine6Pawtucket.jpg"
-          alt="29 Woodbine St APT 6 Pawtucket RI Listing"
-          loading="lazy"
-        />
-      </a>
+        <!-- SAME LAYOUT AS .gallery but for listings -->
+        <div class="listing-gallery">
+          <!-- 1) Top Left: 29 Woodbine -->
+          <a
+            class="listing-tile"
+            href="https://www.zillow.com/homedetails/29-Woodbine-St-APT-6-Pawtucket-RI-02860/65921912_zpid/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img class="listing-tile-img" src="assets/29Woodbine6Pawtucket.jpg" alt="29 Woodbine St Pawtucket" loading="lazy" />
+            <div class="listing-tile-overlay">
+              <div class="listing-tile-title">29 Woodbine St Pawtucket</div>
+              <div class="listing-tile-badge">View on Zillow</div>
+            </div>
+          </a>
 
-      <!-- Listing #2 -->
-      <a
-        class="listing-card"
-        href="https://www.zillow.com/homedetails/88-Arnold-Rd-North-Attleboro-MA-02760/56852708_zpid/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="listing-top">
-          <h3>88 Arnold Rd North Attleboro</h3>
-          <span class="listing-badge">View on Zillow</span>
+          <!-- 2) Top Right: 88 Arnold -->
+          <a
+            class="listing-tile"
+            href="https://www.zillow.com/homedetails/88-Arnold-Rd-North-Attleboro-MA-02760/56852708_zpid/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img class="listing-tile-img" src="assets/88arnold.jpg" alt="88 Arnold Rd North Attleboro" loading="lazy" />
+            <div class="listing-tile-overlay">
+              <div class="listing-tile-title">88 Arnold Rd North Attleboro</div>
+              <div class="listing-tile-badge">View on Zillow</div>
+            </div>
+          </a>
+
+          <!-- 3) Middle Center: 78 St Joe (odd item centered) -->
+          <a
+            class="listing-tile listing-tile-center"
+            href="https://www.zillow.com/homedetails/78-Saint-Joseph-St-APT-9-Woonsocket-RI-02895/65832683_zpid/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img class="listing-tile-img" src="assets/78stjoe9.jpg" alt="78 Saint Joseph St Apt 9 Woonsocket" loading="lazy" />
+            <div class="listing-tile-overlay">
+              <div class="listing-tile-title">78 Saint Joseph St APT 9 Woonsocket</div>
+              <div class="listing-tile-badge">View on Zillow</div>
+            </div>
+          </a>
         </div>
-
-        <img
-          class="listing-img"
-          src="assets/88arnold.jpg"
-          alt="88 Arnold Rd North Attleboro MA Listing"
-          loading="lazy"
-        />
-      </a>
-
-      <!-- Listing #3 -->
-      <a
-        class="listing-card"
-        href="https://www.zillow.com/homedetails/78-Saint-Joseph-St-APT-9-Woonsocket-RI-02895/65832683_zpid/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="listing-top">
-          <h3>78 Saint Joseph St APT 9 Woonsocket</h3>
-          <span class="listing-badge">View on Zillow</span>
-        </div>
-
-        <img
-          class="listing-img"
-          src="assets/78stjoe9.jpg"
-          alt="78 Saint Joseph St Apt 9 Woonsocket RI Listing"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </div>
-</section>
-
-
+      </div>
+    </section>
 
     <!-- RECENT CLOSINGS -->
     <section id="closings" class="section section-alt">
