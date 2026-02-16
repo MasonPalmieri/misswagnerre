@@ -7,7 +7,7 @@
   <meta name="description" content="Missy Wagner Real Estate — Plainville, MA & surrounding areas. Call or text (508) 954-3851." />
 
   <!-- CSS cache-bust for GitHub Pages -->
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 
 <body>
@@ -183,47 +183,91 @@
       </div>
     </section>
 
-    <!-- CURRENT LISTINGS -->
+    <!-- LISTINGS + FACEBOOK SIDEBAR WRAP -->
     <section id="listings" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Current Listings</h2>
-          <p class="muted">Click a listing below to view full details.</p>
-        </div>
-
-        <div class="listing-gallery">
-          <a class="listing-tile"
-             href="https://www.zillow.com/homedetails/29-Woodbine-St-APT-6-Pawtucket-RI-02860/65921912_zpid/"
-             target="_blank"
-             rel="noreferrer">
-            <img class="listing-tile-img" src="assets/29Woodbine6Pawtucket.jpg" alt="29 Woodbine St Pawtucket" loading="lazy" />
-            <div class="listing-tile-overlay">
-              <div class="listing-tile-title">29 Woodbine St Pawtucket</div>
-              <div class="listing-tile-badge">View on Zillow</div>
+        <div class="two-col">
+          <!-- MAIN COLUMN -->
+          <div class="main-col">
+            <!-- CURRENT LISTINGS -->
+            <div class="section-head">
+              <h2>Current Listings</h2>
+              <p class="muted">Click a listing below to view full details.</p>
             </div>
-          </a>
 
-          <a class="listing-tile"
-             href="https://www.zillow.com/homedetails/88-Arnold-Rd-North-Attleboro-MA-02760/56852708_zpid/"
-             target="_blank"
-             rel="noreferrer">
-            <img class="listing-tile-img" src="assets/88arnold1.jpg" alt="88 Arnold Rd North Attleboro" loading="lazy" />
-            <div class="listing-tile-overlay">
-              <div class="listing-tile-title">88 Arnold Rd North Attleboro</div>
-              <div class="listing-tile-badge">View on Zillow</div>
+            <div class="listing-gallery">
+              <a class="listing-tile listing-tile-center"
+                 href="https://www.zillow.com/homedetails/29-Woodbine-St-APT-6-Pawtucket-RI-02860/65921912_zpid/"
+                 target="_blank"
+                 rel="noreferrer">
+                <img class="listing-tile-img" src="assets/29Woodbine6Pawtucket.jpg" alt="29 Woodbine St Pawtucket" loading="lazy" />
+                <div class="listing-tile-overlay">
+                  <div class="listing-tile-title">29 Woodbine St Pawtucket</div>
+                  <div class="listing-tile-badge">View on Zillow</div>
+                </div>
+              </a>
             </div>
-          </a>
 
-          <a class="listing-tile listing-tile-center"
-             href="https://www.zillow.com/homedetails/78-Saint-Joseph-St-APT-9-Woonsocket-RI-02895/65832683_zpid/"
-             target="_blank"
-             rel="noreferrer">
-            <img class="listing-tile-img" src="assets/78stjoe9.jpg" alt="78 Saint Joseph St Apt 9 Woonsocket" loading="lazy" />
-            <div class="listing-tile-overlay">
-              <div class="listing-tile-title">78 Saint Joseph St APT 9 Woonsocket</div>
-              <div class="listing-tile-badge">View on Zillow</div>
+            <!-- PENDING -->
+            <div class="subsection-head">
+              <h3>Pending</h3>
+              <p class="muted">These homes are currently under agreement.</p>
             </div>
-          </a>
+
+            <div class="listing-gallery">
+              <a class="listing-tile"
+                 href="https://www.zillow.com/homedetails/88-Arnold-Rd-North-Attleboro-MA-02760/56852708_zpid/"
+                 target="_blank"
+                 rel="noreferrer">
+                <img class="listing-tile-img" src="assets/88arnold1.jpg" alt="88 Arnold Rd North Attleboro" loading="lazy" />
+                <div class="listing-tile-overlay">
+                  <div class="listing-tile-title">88 Arnold Rd North Attleboro</div>
+                  <div class="listing-tile-badge">View on Zillow</div>
+                </div>
+              </a>
+
+              <a class="listing-tile"
+                 href="https://www.zillow.com/homedetails/78-Saint-Joseph-St-APT-9-Woonsocket-RI-02895/65832683_zpid/"
+                 target="_blank"
+                 rel="noreferrer">
+                <img class="listing-tile-img" src="assets/78stjoe9.jpg" alt="78 Saint Joseph St Apt 9 Woonsocket" loading="lazy" />
+                <div class="listing-tile-overlay">
+                  <div class="listing-tile-title">78 Saint Joseph St APT 9 Woonsocket</div>
+                  <div class="listing-tile-badge">View on Zillow</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- SIDEBAR COLUMN -->
+          <aside class="side-col" aria-label="Recent Facebook posts">
+            <div class="side-card">
+              <div class="side-head">
+                <div class="side-title">Recent Posts</div>
+                <div class="side-sub muted">From Facebook</div>
+              </div>
+
+              <div class="fb-embed">
+                <iframe
+                  title="Missy Wagner Real Estate Facebook timeline"
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMissyWagnerRE&tabs=timeline&width=420&height=720&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                  width="420"
+                  height="720"
+                  style="border:none;overflow:hidden"
+                  scrolling="no"
+                  frameborder="0"
+                  allowfullscreen="true"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+              </div>
+
+              <div class="side-footer">
+                <a class="btn btn-solid btn-full" href="https://www.facebook.com/MissyWagnerRE" target="_blank" rel="noreferrer">
+                  View on Facebook
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -312,27 +356,7 @@
     </div>
   </div>
 
-  <script>
-    // footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // contact form -> mailto
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value.trim();
-      const phone = form.phone.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-
-      const subject = encodeURIComponent("New message from MissyWagner.com");
-      const body = encodeURIComponent(
-        `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`
-      );
-
-      window.location.href = `mailto:missywagner@kw.com?subject=${subject}&body=${body}`;
-    });
-  </script>
-
+  <!-- JS -->
+  <script src="script.js?v=21"></script>
 </body>
 </html>
