@@ -1,5 +1,7 @@
+// footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// contact form -> mailto
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -11,7 +13,7 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
   const message = (data.get("message") || "").toString().trim();
 
   const toEmail = "missywagner@kw.com";
-  const subject = encodeURIComponent("Website inquiry (MissyWagnerRE.com)");
+  const subject = encodeURIComponent("New message from MissyWagner.com");
 
   const body = encodeURIComponent(
     `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}\n`
