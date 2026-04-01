@@ -664,6 +664,10 @@ a, button, input, textarea, select {
   background: #f59e0b;
   color: #fff;
 }
+.listing-sold {
+  background: var(--kw-red);
+  color: #fff;
+}
 
 .listing-info {
   padding: var(--space-4) var(--space-5);
