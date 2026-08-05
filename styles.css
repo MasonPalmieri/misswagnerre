@@ -695,6 +695,21 @@ a, button, input, textarea, select {
   background: var(--kw-red);
   color: #fff;
 }
+.listing-buyer {
+  background: #2563eb;
+  color: #fff;
+}
+
+.closing-text-wrap {
+  min-height: 160px;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--space-3);
+}
+.closing-text-card {
+  cursor: default;
+}
 
 .listing-info {
   padding: var(--space-4) var(--space-5);
