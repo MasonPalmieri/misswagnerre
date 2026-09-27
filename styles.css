@@ -691,6 +691,39 @@ a, button, input, textarea, select {
   background: #f59e0b;
   color: #fff;
 }
+.listing-no-photo {
+  min-height: 320px;
+  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--surface-warm) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-5);
+}
+
+.listing-no-photo-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.listing-no-photo-addr {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.listing-no-photo-sub {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--kw-red);
+}
+
+.listing-no-photo-detail {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
 .listing-sold {
   background: var(--kw-red);
   color: #fff;
