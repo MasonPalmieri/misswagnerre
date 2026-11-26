@@ -668,6 +668,10 @@ a, button, input, textarea, select {
   transform: scale(1.04);
 }
 
+.listing-img-faces {
+  object-position: center 25%;
+}
+
 .listing-featured .listing-img {
   height: 320px;
 }
